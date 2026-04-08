@@ -15,4 +15,35 @@ Aplicação simples desenvolvida em Java para cálculo do Índice de Massa Corpo
 - JOptionPane (Swing)
 
 ## 📂 Estrutura do projeto
-https://mail-attachment.googleusercontent.com/attachment/u/0/?ui=2&ik=2d2c110c5e&attid=0.1&permmsgid=msg-a:r-2302170252483530032&th=19d6e0ce6d3bffa8&view=att&disp=safe&realattid=19d6e0cd1a87bf623e51&zw&saddbat=ANGjdJ_Zxw73I6fdK7Uj6aTVZZ85G8G-wCiZ6C5-4sANfiVH5hajljdkoaW4cecCReG21LMZhZiZw7hSkLNKqMsnNugNdB0hTlEosGK5ApMPRJHWv6DMJqbMqAlDaC5MJFiLABBS9KHembAJM76PWlCBbdY1G6_OCpn-vF85nFJcSojY55j_cHaAaJ4p2KdrzUOzg335ZcHmJoGkGs1Yf7XRib1Ro9xOcZR6d3lOLK5lg2-DUUF8DJ9FjN1qG06HxtOvOFL7xcrg0_x-ejWGYvi9yyZbo8RUvd2XxMSJXiBwWsk4k7io54q9xpAx-DGKU2zVPc0vv6B7OGTt-2SUXDmFwPwHvNnWL0kJX2VEIx--fV-tLeX1ecDoNs3x0fsI4wwwSYKEt8kOKEod2NuSbZT9NGtgCpPPyFXYju4nFOLaZGrRYnbDrgeNWrgdAejRFjCRLymYTRgo7eeS0ZRG1D7RuKg4N79ouvEhxb34HmyoUZTtFsfTN6H9X2nSFoh6amcjVO6WAU0a26XBBU2rFhNU8V-ZODfqyQk4Ntpuu6EiVgXDYY4lSBvGI2bGH0JKa4HZXVw7aTHvX07mFRVVIg28QbZ9qq5YUSVua2fdVDqh6vHQy-jxKz35PB4CiKGrs0i69Mw1bkLIbBsj9KM1__-XUwI33mxgcXqcLho_BWcvefWdpp2iPf-s0iUIf-8tOjyiZaiijdIMVXWI4cQUBUgpiEhhe1WB_kFwQ2M4FwdSFh8TLyDbylyJRSFNTBCY9H_OeyaoYjj4oTW7_PAeAQVTiu-B3rhOqmcRd3DJxRnyC9g4mPw64jOHxcU6xXpQ0u1ZsJ5goaGMOTG8ir7RciiOilH7bVlsgXy4P50uZsmqkhnc-puDMLThrwJcxPFD_ygfXUP0gQoHNfw--U-G_dF2j2ZNy9fZ6B2n97X6ixk863T0WKGsZpXIJdEvedDqfkkMPBETkmogX-6e5cykkIdAtGx83jk6zL9sZ2_7IYf7yVAznPu1Suo_MBTIRc8fLHh3Q_zAYqDzOEMyJWq8
+
+
+void main() {
+    {
+Locale.setDefault(Locale.US);
+Scanner sc = new Scanner(System.in);
+     double peso = Double.parseDouble(JOptionPane.showInputDialog("DIGITE SEU PESO"));
+     double altura = Double.parseDouble(JOptionPane.showInputDialog("DIGITE SUA ALTURA"));
+     double imc = peso / (altura * altura);
+
+        String formatado = String.format("%.2f" , imc);
+        if (imc < 18.5){
+            JOptionPane.showMessageDialog(null, "O IMC do usuário é " + formatado + " ABAIXO DO PESO");
+
+        } else if (imc >= 18.6 && imc <= 24.9) {
+            JOptionPane.showMessageDialog(null, "O IMC do usuário é " + formatado + " PESO IDEAL (PARABÉNS)" );
+        } else if (imc >= 25.0 && imc <= 29.9) {
+            JOptionPane.showMessageDialog(null, "O IMC do usuário é " + formatado + " ATENÇÃO VOCÊ ESTÁ A CIMA DO PESO" );
+        } else if (imc >= 30 && imc <= 34.9) {
+            JOptionPane.showMessageDialog(null, "O IMC do usuário é " + formatado + " OBESIDADE GRAU I" );
+
+        } else if (imc >= 35.0 && imc <= 39.9) {
+            JOptionPane.showMessageDialog(null, "O IMC do usuário é " + formatado + " OBESIDADE GRAU II" );
+
+        }else {
+            JOptionPane.showMessageDialog(null, "O IMC do usuário é " + formatado + " OBESIDADE GRAU III" );
+
+        }
+        sc.close()
+    }
+}
+
