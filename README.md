@@ -1,3 +1,9 @@
+img/x-special/nautilus-clipboard
+copy
+file:///home/wallaceferreirasilva/Imagens/imc-preview.jpg
+
+
+
 # CalculadoraIMC
 Aplicação simples desenvolvida em Java para cálculo do Índice de Massa Corporal (IMC), com classificação automática baseada nos padrões da OMS.
 
